@@ -33,7 +33,7 @@ int StringCalculator::less_than_thousand(int num)
       else
          return num;
     }
-int get_number(ch token)
+int get_number(std::string token)
 {
    int num = std::stoi(token);
     if(num>0)
