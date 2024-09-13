@@ -2,6 +2,7 @@
 #include <sstream>
 #include <iostream>
 #include <cctype>
+#include <algorithm>
 
 int StringCalculator::less_than_thousand(int num)
     {
