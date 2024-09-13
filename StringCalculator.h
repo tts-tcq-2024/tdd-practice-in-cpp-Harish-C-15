@@ -25,6 +25,7 @@ class StringCalculator
    }
     int add(std::string& input)
    { 
+      int sum = 0;
       for( char ch : input)
         {
           int n = get_number(ch);
