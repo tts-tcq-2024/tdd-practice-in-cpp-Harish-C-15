@@ -30,7 +30,9 @@ int StringCalculator::less_than_thousand(int num)
       std::replace(input.begin(), input.end(), '\n', ',');
       int sum = 0;
       std::stringstream ss(input);
-      std::string token;       
+      std::string token; 
+      std::vector<int> negatives;
+       
       while(std::getline(ss,token,','))
       {
           int num = std::stoi(token);
@@ -38,7 +40,6 @@ int StringCalculator::less_than_thousand(int num)
               sum = sum + less_than_thousand(num);
           else
           {
-              std::vector<int> negatives;
               negatives.push_back(num);
           }
       }
