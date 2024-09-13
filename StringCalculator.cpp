@@ -33,11 +33,11 @@ int StringCalculator::less_than_thousand(int num)
       else
          return num;
     }
-int get_number(std::string token)
+int get_positive_number(std::string token)
 {
-   int num = std::stoi(token);
+    int digit = 0;
     if(num>0)
-        int digit = less_than_thousand(num);
+        digit = less_than_thousand(num);
     else
     {
         negatives.push_back(num);
@@ -60,7 +60,8 @@ int StringCalculator::add(std::string input)
       std::string token;  
       while(std::getline(ss,token,','))
       {
-          int num = get_number(token);
+          int num = std::stoi(token);
+          int addition = get_positive_number();
           int sum = 0;
           sum += num;
     }
