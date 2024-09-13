@@ -4,6 +4,6 @@
 #include <string>
 class StringCalculator{
   public:
-    std::string add(const std::string& add);
+    int add(const std::string& add);
 };
 #endif // StringCalculator_H
