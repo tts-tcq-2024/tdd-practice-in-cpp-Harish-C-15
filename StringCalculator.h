@@ -2,8 +2,8 @@
 #define STRINGCALCULATOR_H
 
 #include <string>
-#include <cctype.h>
-#include <iostream.h>
+#include <cctype>
+#include <iostream>
 
 class StringCalculator{
   public:
