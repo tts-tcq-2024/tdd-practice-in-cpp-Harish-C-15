@@ -23,7 +23,7 @@ class StringCalculator
       }
      return 0;
    }
-    int add(std::string& input)
+    int add(std::string input)
    { 
       int sum = 0;
       for( char ch : input)
