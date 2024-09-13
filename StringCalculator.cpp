@@ -17,7 +17,7 @@ int StringCalculator::less_than_thousand(int num)
      {
         char delimiter = input[2];  
         input = input.substr(4);
-        std::replace(str.begin(), str.end(), delimiter, ',');
+        std::replace(input.begin(), input.end(), delimiter, ',');
      }
       std::replace(input.begin(), input.end(), '\n', ',');
       int sum = 0;
