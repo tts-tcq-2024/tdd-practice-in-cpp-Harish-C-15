@@ -14,7 +14,8 @@ int StringCalculator::less_than_thousand(int num)
    {
       if(isdigit(ch))
       {
-        return less_than_thousand(ch);
+        int num = ch -'0';
+        return less_than_thousand(num);
       }
      return 0;
    }
