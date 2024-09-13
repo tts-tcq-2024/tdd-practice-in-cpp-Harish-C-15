@@ -13,8 +13,8 @@ class StringCalculator
        if (num>1000)
          return 0;
       else
-         return num
-  
+         return num;
+    }
     int get_number(char ch)
    {
       if(isdigit(ch))
@@ -23,7 +23,6 @@ class StringCalculator
       }
      return 0;
    }
-  
     int add(std::string& input)
    { 
       for( char ch : input)
