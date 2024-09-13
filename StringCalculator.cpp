@@ -33,7 +33,7 @@ int StringCalculator::less_than_thousand(int num)
       else
          return num;
     }
-int get_positive_number(std::string token)
+int StringCalculator::get_positive_number(int num)
 {
     int digit = 0;
     if(num>0)
