@@ -16,7 +16,7 @@ int StringCalculator::less_than_thousand(int num)
        if (input.substr(0, 2) == "//") 
      {
         char delimiter = input[2];  
-        str = str.substr(4);
+        input = input.substr(4);
         std::replace(str.begin(), str.end(), delimiter, ',');
      }
       std::replace(input.begin(), input.end(), '\n', ',');
