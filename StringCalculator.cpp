@@ -61,7 +61,7 @@ int StringCalculator::add(std::string input)
       while(std::getline(ss,token,','))
       {
           int num = std::stoi(token);
-          int addition = get_positive_number();
+          int addition = get_positive_number(num);
           int sum = 0;
           sum += num;
     }
