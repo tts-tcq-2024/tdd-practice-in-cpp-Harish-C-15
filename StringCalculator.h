@@ -4,6 +4,9 @@
 #include <string>
 class StringCalculator{
   public:
-    int add(std::string input);
+    int add(std::string input)
+   {
+      return 0;
+   }
 };
 #endif // StringCalculator_H
