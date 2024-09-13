@@ -13,9 +13,13 @@ int StringCalculator::less_than_thousand(int num)
     }
     int StringCalculator::add(std::string input)
    { 
+       if (input.substr(0, 2) == "//") 
+     {
+        char delimiter = input[2];  
+        str = str.substr(4);
+        std::replace(str.begin(), str.end(), delimiter, ',');
+     }
       std::replace(input.begin(), input.end(), '\n', ',');
-      std::replace(input.begin(), input.end(), ';', ',');
-      std::replace(input.begin(), input.end(), '/', ',');
       int sum = 0;
       std::stringstream ss(input);
       std::string token;       
