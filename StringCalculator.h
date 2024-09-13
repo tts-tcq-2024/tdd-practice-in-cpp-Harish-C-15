@@ -5,4 +5,4 @@
 
 std::string addition_of_numeric_values(const std::string& name);
 
-#endif // SOUNDEX_H
+#endif // StringCalculator_H
