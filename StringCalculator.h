@@ -2,7 +2,7 @@
 #define STRINGCALCULATOR_H
 
 #include <string>
-
-std::string addition_of_numeric_values(const std::string& add);
-
+class StringCalculator{
+std::string add(const std::string& add);
+}
 #endif // StringCalculator_H
