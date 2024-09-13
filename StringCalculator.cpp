@@ -4,6 +4,12 @@
 #include <cctype>
 #include <algorithm>
 
+class NegativeNumberException : public std::runtime_error {
+public:
+    NegativeNumberException(const std::string& message)
+        : std::runtime_error(message) {}
+};
+
 int StringCalculator::less_than_thousand(int num)
     {
        if (num>1000)
