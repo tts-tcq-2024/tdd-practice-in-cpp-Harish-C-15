@@ -15,7 +15,7 @@ int StringCalculator::less_than_thousand(int num)
    { 
       std::replace(input.begin(), input.end(), '\n', ',');
       std::replace(input.begin(), input.end(), ';', ',');
-       std::replace(input.begin(), input.end(), '/', ',');
+      std::replace(input.begin(), input.end(), '/', ',');
       int sum = 0;
       std::stringstream ss(input);
       std::string token;       
