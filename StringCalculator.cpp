@@ -3,6 +3,8 @@
 #include <iostream>
 #include <cctype>
 #include <algorithm>
+#include <vector>
+#include <stdexcept>
 
 class NegativeNumberException : public std::runtime_error {
 public:
@@ -32,7 +34,23 @@ int StringCalculator::less_than_thousand(int num)
       while(std::getline(ss,token,','))
       {
           int num = std::stoi(token);
-          sum = sum + less_than_thousand(num);
+          if(num>0)
+              sum = sum + less_than_thousand(num);
+          else
+          {
+              std::vector<int> negatives;
+              negatives.push_back(num);
+          }
       }
+       if (!negatives.empty()) {
+        std::string message = "Negatives not allowed: ";
+        for (int i = 0; i < negatives.size(); ++i) {
+            message += std::to_string(negatives[i]);
+            if (i < negatives.size() - 1) {
+                message += ", ";
+            }
+        }
+        throw NegativeNumberException(message);
+    }
       return sum;
    }
