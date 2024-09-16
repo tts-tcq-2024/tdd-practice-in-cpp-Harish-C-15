@@ -62,6 +62,15 @@ TEST(StringCalculatorAddTests, IgnoreNumbersGreaterThan1000) {
     ASSERT_EQ(result, expectedresult);
 }
 
+TEST(StringCalculatorAddTests, IgnoreAllNumbersThatAreGreaterThan1000) {
+    int expectedresult = 0;
+    std::string input = "1000,1001";
+    StringCalculator objUnderTest;
+    int result = objUnderTest.add(input);
+
+    ASSERT_EQ(result, expectedresult);
+}
+
 TEST(StringCalculatorAddTests, ExpectSumWithCustomDelimiter) {
     int expectedresult = 3;
     std::string input = "//;\n1;2";
