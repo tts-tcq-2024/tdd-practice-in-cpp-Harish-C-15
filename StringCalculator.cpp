@@ -45,18 +45,24 @@ int StringCalculator::get_positive_number(int num)
     }
     return digit;
 }
-    
-int StringCalculator::add(std::string input)
-   { 
-       if (input.substr(0, 2) == "//") 
+
+std::string StringCalculator::processed_String_for_delimiters(std::string input)
+{
+      if (input.substr(0, 2) == "//") 
      {
         char delimiter = input[2];  
         input = input.substr(4);
         std::replace(input.begin(), input.end(), delimiter, ',');
      }
       std::replace(input.begin(), input.end(), '\n', ',');
+    return input;
+}
+    
+int StringCalculator::add(std::string input)
+   { 
+      std::string processed_input = processed_String_for_delimiters(input);
       int sum = 0;
-      std::stringstream ss(input);
+      std::stringstream ss(processed_input);
       std::string token;  
       while(std::getline(ss,token,','))
       {
