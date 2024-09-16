@@ -68,7 +68,7 @@ int StringCalculator::add(std::string input)
       {
           int num = std::stoi(token);
           int addition = get_positive_number(num);
-          sum += num;
+          sum += addition;
     }
        if(flag>0)
           throw_error();
