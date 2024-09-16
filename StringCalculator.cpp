@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <vector>
 #include <stdexcept>
+#include <string>
 
 std::vector<int> negatives;
 int flag = 0;
@@ -60,16 +61,22 @@ std::string StringCalculator::processed_String_for_delimiters(std::string input)
 
 int StringCalculator::exception_handling_for_whitespce(std::string token)
 {
-    if (!token.empty()) {  // Check if the token is not empty
-            try {
+    if (!token.empty()) 
+    {  // Check if the token is not empty
+            try 
+            {
                 int num = std::stoi(token);  // Convert to integer
                 return num;
-            } catch (const std::invalid_argument& e) {
+            } 
+            catch (const std::invalid_argument& e) 
+            {
                 std::cout << "Invalid argument: " << e.what() << std::endl;
             }
-        } else {
-            std::cout << "Empty token found, skipping." << std::endl;
-        }
+    } 
+    else 
+    {
+        std::cout << "Empty token found, skipping." << std::endl;
+    }
 }
     
 int StringCalculator::add(std::string input)
