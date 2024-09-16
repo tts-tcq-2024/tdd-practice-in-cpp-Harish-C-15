@@ -10,6 +10,7 @@ class StringCalculator
   public:
     int less_than_thousand(int num);
     int get_positive_number(int num);
+    std::string processed_String_for_delimiters(std::string input);
     int add(std::string input);
 };
 #endif // StringCalculator_H
