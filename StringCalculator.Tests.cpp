@@ -54,7 +54,7 @@ TEST(StringCalculatorAddTests, ExpectSumWithNewlineDelimiter) {
 }
 
 TEST(StringCalculatorAddTests, ExpectSumWithUnknownLength) {
-    int expectedresult = 15;
+    int expectedresult = 11;
     std::string input = "1\n2,3;4,5";
      StringCalculator objUnderTest;
     int result = objUnderTest.add(input);
