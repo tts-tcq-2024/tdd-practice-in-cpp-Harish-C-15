@@ -28,7 +28,7 @@ void throw_error()
 }
 int StringCalculator::less_than_thousand(int num)
     {
-       if (num>1000)
+       if (num>=1000)
          return 0;
       else
          return num;
@@ -36,7 +36,7 @@ int StringCalculator::less_than_thousand(int num)
 int StringCalculator::get_positive_number(int num)
 {
     int digit = 0;
-    if(num>0)
+    if(num>=0)
         digit = less_than_thousand(num);
     else
     {
