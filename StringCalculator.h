@@ -11,7 +11,7 @@ class StringCalculator
     int less_than_thousand(int num);
     int get_positive_number(int num);
     std::string processed_String_for_delimiters(std::string input);
-    int exception_handling_for_whitespce(std::string token)
+    int exception_handling_for_whitespce(std::string token);
     int add(std::string input);
 };
 #endif // StringCalculator_H
