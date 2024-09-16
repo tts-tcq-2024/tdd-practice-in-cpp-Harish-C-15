@@ -71,7 +71,7 @@ TEST(StringCalculatorAddTests, ExpectSumWithCustomDelimiter) {
     ASSERT_EQ(result, expectedresult);
 }
 
-TEST(StringCalculatorAddTests, ExpectSumWithCustomDelimiter) {
+TEST(StringCalculatorAddTests, ExpectSumWithCustomDelimiterWithCustomLength) {
     int expectedresult = 3;
     std::string input = "//;\n1;;2";
     StringCalculator objUnderTest;
