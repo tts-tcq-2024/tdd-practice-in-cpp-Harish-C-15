@@ -63,19 +63,13 @@ int StringCalculator::exception_handling_for_whitespce(std::string token)
 {
     if (!token.empty()) 
     {  // Check if the token is not empty
-            try 
-            {
-                int num = std::stoi(token);  // Convert to integer
-                return num;
-            } 
-            catch (const std::invalid_argument& e) 
-            {
-                std::cout << "Invalid argument: " << e.what() << std::endl;
-            }
+            
+        int num = std::stoi(token);  // Convert to integer
+        return num;
     } 
     else 
     {
-        std::cout << "Empty token found, skipping." << std::endl;
+        return 0;
     }
 }
     
