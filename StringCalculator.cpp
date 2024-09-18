@@ -38,7 +38,7 @@ int StringCalculator::get_positive_number(int num)
 {
     int digit = 0;
     if(num>=0)
-        digit = less_than_thousand(num);
+        digit = check_for_less_than_thousand(num);
     else
     {
         negatives.push_back(num);
@@ -75,7 +75,7 @@ int StringCalculator::exception_handling_for_whitespce(std::string token)
     
 int StringCalculator::add(std::string input)
    { 
-      std::string processed_input = processed_String_for_delimiters(input);
+      std::string processed_input = Process_String_for_delimiters(input);
       int sum = 0;
       std::stringstream ss(processed_input);
       std::string token;  
