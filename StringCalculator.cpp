@@ -27,7 +27,7 @@ void throw_error()
             }
         throw NegativeNumberException(message);
 }
-int StringCalculator::less_than_thousand(int num)
+int StringCalculator::check_for_less_than_thousand(int num)
     {
        if (num>=1000)
          return 0;
@@ -47,7 +47,7 @@ int StringCalculator::get_positive_number(int num)
     return digit;
 }
 
-std::string StringCalculator::processed_String_for_delimiters(std::string input)
+std::string StringCalculator::Process_String_for_delimiters(std::string input)
 {
       if (input.substr(0, 2) == "//") 
      {
