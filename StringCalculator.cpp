@@ -17,8 +17,11 @@ public:
 };
 void alphabet_error()
 {
+    if(token>="a"&&token<="z"&&token>="A"&&token<="Z")
+    {
         std::string message = "Alphabets not allowed: ";
         throw Exception(message);
+    }
 }
 void throw_error()
 {
@@ -69,8 +72,7 @@ int StringCalculator::exception_handling_for_whitespce(std::string token)
 {
     if (!token.empty()) 
     {  // Check if the token is not empty
-        if(token>="a"&&token<="z"&&token>="A"&&"Z")
-            alphabet_error();  
+        alphabet_error(token);  
         int num = std::stoi(token);  // Convert to integer
         return num;
     } 
@@ -88,7 +90,7 @@ int StringCalculator::add(std::string input)
           int num = exception_handling_for_whitespce(token);
           int addition = get_positive_number(num);
           sum += addition;
-    }
+      }
        if(flag>0)
           throw_error();
       return sum;
