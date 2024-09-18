@@ -9,11 +9,17 @@
 
 std::vector<int> negatives;
 int flag = 0;
-class NegativeNumberException : public std::runtime_error {
+
+class Exception : public std::runtime_error {
 public:
-    NegativeNumberException(const std::string& message)
+    Exception(const std::string& message)
         : std::runtime_error(message) {}
 };
+void alphabet_error()
+{
+        std::string message = "Alphabets not allowed: ";
+        throw Exception(message);
+}
 void throw_error()
 {
         std::string message = "Negatives not allowed: ";
@@ -25,7 +31,7 @@ void throw_error()
                     message += ", ";
                 }
             }
-        throw NegativeNumberException(message);
+        throw Exception(message);
 }
 int StringCalculator::check_for_less_than_thousand(int num)
     {
@@ -63,7 +69,8 @@ int StringCalculator::exception_handling_for_whitespce(std::string token)
 {
     if (!token.empty()) 
     {  // Check if the token is not empty
-            
+        if(token>="a"&&token<="z"&&token>="A"&&"Z")
+            alphabet_error();  
         int num = std::stoi(token);  // Convert to integer
         return num;
     } 
