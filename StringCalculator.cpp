@@ -15,7 +15,7 @@ public:
     Exception(const std::string& message)
         : std::runtime_error(message) {}
 };
-void alphabet_error()
+void alphabet_error(std::string token)
 {
     if(token>="a"&&token<="z"&&token>="A"&&token<="Z")
     {
