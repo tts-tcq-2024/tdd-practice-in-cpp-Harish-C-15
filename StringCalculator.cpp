@@ -74,10 +74,7 @@ int StringCalculator::exception_handling_for_whitespce(std::string token)
         int num = std::stoi(token);  // Convert to integer
         return num;
     } 
-    else 
-    {
-        return 0;
-    }
+    return 0;
 }
     
 int StringCalculator::add(std::string input)
