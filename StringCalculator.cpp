@@ -17,11 +17,12 @@ public:
 };
 void alphabet_error(std::string token)
 {
-    if(token>="a"&&token<="z"&&token>="A"&&token<="Z")
-    {
-        std::string message = "Alphabets not allowed: ";
-        throw Exception(message);
-    }
+    for(char ch : token)
+        if(isalpha(ch))
+        {
+            std::string message = "Alphabets not allowed: ";
+            throw Exception(message);
+        }
 }
 void throw_error()
 {
