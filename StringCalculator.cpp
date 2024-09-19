@@ -15,7 +15,7 @@ public:
     Exception(const std::string& message)
         : std::runtime_error(message) {}
 };
-void alphabet_error(std::string token)
+void check_for_alphabet_error(std::string token)
 {
     for(char ch : token)
         if(isalpha(ch))
@@ -73,7 +73,7 @@ int StringCalculator::exception_handling_for_whitespce(std::string token)
 {
     if (!token.empty()) 
     {  // Check if the token is not empty
-        alphabet_error(token);  
+        check_for_alphabet_error(token);  
         int num = std::stoi(token);  // Convert to integer
         return num;
     } 
